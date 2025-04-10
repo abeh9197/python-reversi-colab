@@ -9,6 +9,7 @@
 """
 
 from controllers.game_controller import GameController
+from models.board import Board
 
 
 def main():
@@ -16,8 +17,10 @@ def main():
     ゲームのメイン関数
     ゲームコントローラーを初期化して実行します
     """
-    game = GameController()
-    game.run()
+    # game = GameController()
+    # game.run()
+    board = Board()
+    print(board)
 
 
 if __name__ == "__main__":
