@@ -20,9 +20,15 @@ class ConsoleView:
         """
         コンソールビューを初期化する
         """
-        # TODO: コンソールビューを初期化するコードを書く
-        pass
-        
+    
+    def display_valid_moves(self, valid_moves):
+        """
+        有効な手を表示する
+        Args:
+            valid_moves (list): 有効な手の座標タプル(row, col)のリスト
+        """
+        print(f"置ける場所: めくれる枚数, めくれる座標{valid_moves}")
+
     def display_board(self, board):
         """
         盤面を表示する
@@ -30,10 +36,9 @@ class ConsoleView:
         Args:
             board (Board): 表示する盤面
         """
-        # TODO: 盤面を表示するコードを書く
-        pass
+        # print(self.board)
         
-    def display_score(self, black_count, white_count):
+    def display_score(self):
         """
         スコアを表示する
         
@@ -41,10 +46,10 @@ class ConsoleView:
             black_count (int): 黒石の数
             white_count (int): 白石の数
         """
-        # TODO: スコアを表示するコードを書く
-        pass
+        # black_count, white_count = .score()
+        # print(f"黒:{black_count}\n白:{white_count}")
         
-    def display_turn(self, player):
+    def display_turn(self, color):
         """
         現在のプレイヤーのターンを表示する
         
@@ -52,27 +57,21 @@ class ConsoleView:
             player (Player): 現在のプレイヤー
         """
         # TODO: プレイヤーのターンを表示するコードを書く
-        pass
-        
-    def display_valid_moves(self, valid_moves):
-        """
-        有効な手を表示する
-        
-        Args:
-            valid_moves (list): 有効な手の座標タプル(row, col)のリスト
-        """
-        # TODO: 有効な手を表示するコードを書く
-        pass
-        
-    def display_game_over(self, winner):
+        # if color == 1:
+        #     print("プレイヤーのターン！")
+        # else:
+        #     print("コンピューターのターン！")
+
+    def display_game_over(self):
         """
         ゲーム終了と勝者を表示する
         
         Args:
             winner (Player): 勝者のプレイヤーオブジェクト、引き分けの場合はNone
         """
-        # TODO: ゲーム終了と勝者を表示するコードを書く
-        pass
+        # from models.game import Game
+        # game = Game()
+        # print(f"ゲーム終了！勝者は{game.get_winner()}")
         
     def get_player_move(self, valid_moves):
         """
@@ -95,4 +94,6 @@ class ConsoleView:
             message (str): 表示するエラーメッセージ
         """
         # TODO: エラーメッセージを表示するコードを書く
-        pass
+        # message = "error!!!"
+        # print(message)
+
